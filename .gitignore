@@ -40,8 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Ignore large video files
-public/videos/*.MP4
-public/videos/*.mp4
-public/videos/*.mov
-public/videos/*.MOV
+# Videos are tracked via Git LFS
+# public/videos/*.MP4
+# public/videos/*.mp4
