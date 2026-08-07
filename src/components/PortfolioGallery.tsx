@@ -5,7 +5,8 @@ import gsap from "gsap";
 import Image from "next/image";
 import { Play, X, Eye, ArrowUpRight } from "lucide-react";
 
-const API = "http://localhost:5000/api";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "https://skypilot-be.vercel.app/api";
+
 
 interface GalleryItem {
   id: number; title: string; category: string;

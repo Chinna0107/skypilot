@@ -9,7 +9,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
-const API = "http://localhost:5000/api";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "https://skypilot-be.vercel.app/api";
+
 
 interface Client { id: number; name: string; logo_url: string; location: string; projects: string; }
 interface Testimonial { id: number; tag: string; quote: string; author: string; role: string; rating: number; }

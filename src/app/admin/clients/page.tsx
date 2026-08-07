@@ -6,7 +6,8 @@ import AdminLayout from "@/components/admin/AdminLayout";
 import { Plus, Pencil, Trash2, X, Check, Upload, Star } from "lucide-react";
 import Image from "next/image";
 
-const API = "http://localhost:5000/api";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "https://skypilot-be.vercel.app/api";
+
 
 interface Client {
   id: number; name: string; logo_url: string; location: string; projects: string; sort_order: number;

@@ -6,7 +6,8 @@ import Link from "next/link";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { TrendingUp, Eye, Camera, Map, Users, ImageIcon, ArrowUpRight, ChevronRight, Activity } from "lucide-react";
 
-const API = "http://localhost:5000/api";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "https://skypilot-be.vercel.app/api";
+
 
 export default function AdminDashboard() {
   const router = useRouter();
