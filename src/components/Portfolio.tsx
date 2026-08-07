@@ -14,25 +14,25 @@ const PROJECTS = [
     title: "PRIYA CEMENTS",
     category: "Drone Survey • Progress Monitoring",
     image: "/images/portfolio_1_1784385776657.png",
-    video: "/videos/hero-bg.MP4"
+    video: "https://res.cloudinary.com/p8auppz8/video/upload/v1786114867/port-1_v5egyh.mp4"
   },
   {
     title: "POWERGRID",
     category: "Transmission Line Inspection",
     image: "/images/portfolio_2_1784385789292.png",
-    video: "/videos/port-2.MP4"
+    video: "https://res.cloudinary.com/p8auppz8/video/upload/v1786114898/port-2_byokap.mp4"
   },
   {
     title: "SOLAR PLANT",
     category: "Inspection • Thermal Analysis",
     image: "/images/service_inspection_1784385743368.png",
-    video: "/videos/port-3.MP4"
+    video: "https://res.cloudinary.com/p8auppz8/video/upload/v1786114886/port-3_zlifa7.mp4"
   },
   {
     title: "A-MIX CONCRETE",
     category: "Construction Progress Monitoring",
     image: "/images/portfolio_3_1784385800215.png",
-    video: "/videos/port-4.MP4"
+    video: "https://res.cloudinary.com/p8auppz8/video/upload/v1786115164/port-4_zyhxz2.mp4"
   }
 ];
 
