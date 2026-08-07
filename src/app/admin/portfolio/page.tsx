@@ -49,11 +49,15 @@ export default function AdminPortfolioPage() {
 
   const uploadFile = async (file: File, type: "image" | "video"): Promise<string> => {
     setUploading(type);
-    const fd = new FormData(); fd.append("file", file);
-    const res = await fetch(`${API}/upload`, { method: "POST", body: fd });
+    const fd = new FormData();
+    fd.append("file", file);
+    fd.append("upload_preset", "skypilot_unsigned");
+    fd.append("folder", "skybe");
+    const resourceType = file.type.startsWith("video/") ? "video" : "image";
+    const res = await fetch(`https://api.cloudinary.com/v1_1/p8auppz8/${resourceType}/upload`, { method: "POST", body: fd });
     const data = await res.json();
     setUploading(null);
-    return data.url;
+    return data.secure_url;
   };
 
   useEffect(() => {
