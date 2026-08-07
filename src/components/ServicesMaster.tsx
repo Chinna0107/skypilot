@@ -115,7 +115,7 @@ export default function ServicesMaster() {
             HIGH-PRECISION AERIAL SOLUTIONS
           </div>
 
-          <h1 className="serv-anim font-oswald text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-none">
+          <h1 className="serv-anim font-oswald text-[1.75rem] sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-tight">
             ENGINEERED FOR ACCURACY.<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-[var(--color-brand-orange)]">
               FLOWN WITH PRECISION.
@@ -128,16 +128,16 @@ export default function ServicesMaster() {
         </div>
 
         {/* Stats Quick Ribbon */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-20">
           {[
             { label: "MAPPING ACCURACY", value: "Up to 0.5 cm/px" },
             { label: "FLIGHT PERMITS", value: "Digital Sky 100% Cleared" },
             { label: "DATA DELIVERABLE", value: "CAD, BIM, GIS & 4K" },
             { label: "PROJECTS DELIVERED", value: "1000+ Missions" }
           ].map((item, i) => (
-            <div key={i} className="bg-[#0e0e0e] border border-white/5 p-5 rounded-2xl">
+            <div key={i} className="bg-[#0e0e0e] border border-white/5 p-4 sm:p-5 rounded-2xl">
               <span className="font-inter text-[9px] text-[var(--color-brand-orange)] font-bold tracking-widest uppercase block mb-1">{item.label}</span>
-              <h3 className="font-oswald text-white text-lg sm:text-xl font-bold uppercase">{item.value}</h3>
+              <h3 className="font-oswald text-white text-base sm:text-xl font-bold uppercase">{item.value}</h3>
             </div>
           ))}
         </div>
@@ -199,7 +199,7 @@ export default function ServicesMaster() {
               </div>
 
               {/* Drone Specifications Card */}
-              <div className="p-4 bg-[#1a1a1a] rounded-xl border border-white/5 flex items-center justify-between text-xs">
+              <div className="p-4 bg-[#1a1a1a] rounded-xl border border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
                 <div>
                   <span className="text-[10px] text-gray-500 font-bold uppercase block">PRIMARY DEPLOYMENT PLATFORM</span>
                   <span className="text-white font-bold">{activeService.drone}</span>
@@ -233,10 +233,10 @@ export default function ServicesMaster() {
               </div>
 
               {/* CTA link */}
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+              <div className="pt-4 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <Link
                   href="/contact"
-                  className="bg-[var(--color-brand-orange)] hover:bg-orange-600 text-black hover:text-white px-6 py-3 rounded-xl font-inter text-xs font-bold tracking-widest uppercase transition-all duration-300 inline-flex items-center gap-2"
+                  className="w-full sm:w-auto bg-[var(--color-brand-orange)] hover:bg-orange-600 text-black hover:text-white px-6 py-3 rounded-xl font-inter text-xs font-bold tracking-widest uppercase transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   REQUEST {activeService.category.toUpperCase()} QUOTE <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -258,7 +258,7 @@ export default function ServicesMaster() {
             <p className="font-inter text-xs text-gray-400 max-w-sm">Adjust project acreage below to estimate total data frames and flight coverage time.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#141414] border border-white/5 p-6 rounded-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-[#141414] border border-white/5 p-4 sm:p-6 lg:p-8 rounded-2xl">
             
             {/* Input Controls */}
             <div className="lg:col-span-6 space-y-6">
@@ -295,12 +295,12 @@ export default function ServicesMaster() {
             {/* Calculated Output Ribbon */}
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="p-4 bg-[#101010] rounded-xl border border-white/5 text-center">
-                <span className="text-[10px] text-gray-500 font-bold uppercase block mb-1">ESTIMATED FLIGHT TIME</span>
-                <span className="font-oswald text-2xl font-bold text-white">~{estFlightHours} {estFlightHours === 1 ? "HOUR" : "HOURS"}</span>
+                <span className="text-[10px] text-gray-500 font-bold uppercase block mb-1">EST. FLIGHT TIME</span>
+                <span className="font-oswald text-xl sm:text-2xl font-bold text-white">~{estFlightHours} {estFlightHours === 1 ? "HR" : "HRS"}</span>
               </div>
               <div className="p-4 bg-[#101010] rounded-xl border border-white/5 text-center">
-                <span className="text-[10px] text-gray-500 font-bold uppercase block mb-1">ESTIMATED DATA FRAMES</span>
-                <span className="font-oswald text-2xl font-bold text-[var(--color-brand-orange)]">~{estImages.toLocaleString()} SHOTS</span>
+                <span className="text-[10px] text-gray-500 font-bold uppercase block mb-1">EST. DATA FRAMES</span>
+                <span className="font-oswald text-xl sm:text-2xl font-bold text-[var(--color-brand-orange)]">~{estImages.toLocaleString()}</span>
               </div>
             </div>
 

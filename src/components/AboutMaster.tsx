@@ -139,7 +139,7 @@ export default function AboutMaster() {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ================= SECTION 1: HERO & FOUNDER OVERVIEW ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center mb-12 sm:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center mb-12 sm:mb-20">
           
           {/* Left Column: Headline & Bio */}
           <div className="lg:col-span-7 space-y-6">
@@ -148,7 +148,7 @@ export default function AboutMaster() {
               ABOUT SKYPILOT DRONE SERVICES
             </div>
 
-            <h1 className="hero-anim-text font-oswald text-3xl sm:text-5xl xl:text-7xl font-extrabold uppercase tracking-tight leading-[0.95]">
+            <h1 className="hero-anim-text font-oswald text-[1.75rem] sm:text-5xl xl:text-7xl font-extrabold uppercase tracking-tight leading-[1.0] sm:leading-[0.95]">
               PRECISION FROM ABOVE.<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-[var(--color-brand-orange)]">
                 PURPOSE ON THE GROUND.
@@ -160,7 +160,7 @@ export default function AboutMaster() {
             </p>
 
             {/* Founder Sign-off Badge */}
-            <div className="hero-anim-text pt-4 flex items-center gap-6 border-t border-white/10">
+            <div className="hero-anim-text pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 border-t border-white/10">
               <div>
                 <p className="font-serif italic text-3xl text-[var(--color-brand-orange)]">Vinay Kanth</p>
                 <p className="font-oswald text-xs uppercase font-bold text-white tracking-widest mt-0.5">
@@ -187,7 +187,7 @@ export default function AboutMaster() {
           {/* Right Column: High-Res Founder Portrait Card */}
           <div className="lg:col-span-5 hero-portrait-wrap">
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-white/10 p-2 shadow-2xl group">
-              <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-black">
+              <div className="relative aspect-[3/2] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden bg-black">
                 <Image
                   src="/images/founder_portrait_vinay.png"
                   alt="Vinay Kanth - Founder"
@@ -214,7 +214,7 @@ export default function AboutMaster() {
         </div>
 
         {/* ================= SECTION 2: STATS BAR ================= */}
-        <div className="hero-stats-bar grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-12 sm:mb-24">
+        <div className="hero-stats-bar grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-12 sm:mb-20">
           {[
             { icon: ShieldCheck, title: "DGCA CERTIFIED", desc: "Licensed Commercial Pilot" },
             { icon: Star, title: "8+ YEARS", desc: "Industry Flight Experience" },
@@ -223,7 +223,7 @@ export default function AboutMaster() {
           ].map((stat, i) => {
             const Icon = stat.icon;
             return (
-              <div key={i} className="hero-stat-card bg-[#0e0e0e] border border-white/5 hover:border-[var(--color-brand-orange)]/30 p-6 rounded-2xl transition-all duration-300 flex items-center gap-4">
+              <div key={i} className="hero-stat-card bg-[#0e0e0e] border border-white/5 hover:border-[var(--color-brand-orange)]/30 p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center gap-4">
                 <div className="p-3 bg-[#161616] rounded-xl text-[var(--color-brand-orange)] border border-white/5 shrink-0">
                   <Icon className="w-6 h-6" />
                 </div>
@@ -250,17 +250,17 @@ export default function AboutMaster() {
             </div>
 
             {/* Navigation Tabs */}
-            <div className="flex flex-wrap gap-2 bg-[#121212] p-1.5 rounded-xl border border-white/5">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 bg-[#121212] p-1.5 rounded-xl border border-white/5">
               {[
-                { id: "story", label: "FOUNDER & STORY" },
-                { id: "fleet", label: "OUR AERIAL FLEET" },
-                { id: "safety", label: "SAFETY & COMPLIANCE" },
+                { id: "story", label: "STORY" },
+                { id: "fleet", label: "FLEET" },
+                { id: "safety", label: "SAFETY" },
                 { id: "milestones", label: "MILESTONES" }
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`px-4 py-2.5 rounded-lg font-inter text-xs font-bold tracking-wider uppercase transition-all duration-300 ${
+                  className={`px-3 py-2.5 rounded-lg font-inter text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 ${
                     activeTab === tab.id
                       ? "bg-[var(--color-brand-orange)] text-black shadow-lg"
                       : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -375,7 +375,7 @@ export default function AboutMaster() {
           {/* TAB CONTENT 4: MILESTONES */}
           {activeTab === "milestones" && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 {TIMELINE.map((item, i) => (
                   <div key={i} className="bg-[#141414] border border-white/5 p-5 rounded-2xl text-center space-y-2">
                     <span className="font-oswald text-2xl font-bold text-[var(--color-brand-orange)] block">{item.year}</span>
@@ -390,7 +390,7 @@ export default function AboutMaster() {
         </div>
 
         {/* ================= SECTION 4: CALL TO ACTION ================= */}
-        <div className="bg-gradient-to-r from-[#121212] via-[#161616] to-[#121212] border border-white/10 rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-gradient-to-r from-[#121212] via-[#161616] to-[#121212] border border-white/10 rounded-3xl p-6 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
           <div className="space-y-2 max-w-xl text-center md:text-left">
             <h3 className="font-oswald text-2xl sm:text-4xl font-bold uppercase text-white tracking-tight">
               READY TO ELEVATE YOUR PERSPECTIVE?
