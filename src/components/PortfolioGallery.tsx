@@ -27,7 +27,8 @@ export default function PortfolioGallery() {
   useEffect(() => {
     fetch(`${API}/portfolio`)
       .then(r => r.json())
-      .then(data => setItems(Array.isArray(data) ? data : []));
+      .then(data => setItems(Array.isArray(data) ? data : []))
+      .catch(() => setItems([]));
   }, []);
 
   const filtered = filter === "all" ? items : items.filter(i => i.filter === filter);
