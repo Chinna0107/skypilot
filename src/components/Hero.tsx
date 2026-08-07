@@ -71,7 +71,7 @@ export default function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0 pointer-events-none gpu-accelerated">
         <video
-          src="/videos/hero-bg.MP4"
+          src="https://res.cloudinary.com/p8auppz8/video/upload/v1786115590/hero-bg-compressed_wlgi5s.mp4"
           autoPlay
           loop
           muted

@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
       <div className="hidden lg:flex flex-col justify-between w-1/2 relative overflow-hidden p-12">
         {/* Background video */}
         <video
-          src="/videos/hero-bg.MP4"
+          src="https://res.cloudinary.com/p8auppz8/video/upload/v1786115590/hero-bg-compressed_wlgi5s.mp4"
           autoPlay
           loop
           muted
