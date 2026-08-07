@@ -14,7 +14,7 @@ const PROJECTS = [
     title: "PRIYA CEMENTS",
     category: "Drone Survey • Progress Monitoring",
     image: "/images/portfolio_1_1784385776657.png",
-    video: "/videos/hero-bg.mp4"
+    video: "/videos/hero-bg.MP4"
   },
   {
     title: "POWERGRID",

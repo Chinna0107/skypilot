@@ -7,7 +7,7 @@ export default function PortfolioPage() {
       <PageHeader 
         title="Our Portfolio"
         description="Explore our gallery of stunning aerial cinematography, high-resolution photography, and precision mapping projects."
-        bgVideo="/videos/hero-bg.mp4"
+        bgVideo="/videos/hero-bg.MP4"
         showOverlay={false}
       />
       <PortfolioGallery />

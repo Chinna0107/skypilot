@@ -71,7 +71,7 @@ export default function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0 pointer-events-none gpu-accelerated">
         <video
-          src="/videos/hero-bg.mp4"
+          src="/videos/hero-bg.MP4"
           autoPlay
           loop
           muted
