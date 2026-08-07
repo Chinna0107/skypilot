@@ -154,9 +154,9 @@ export default function AdminPortfolioPage() {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" style={{ overflow: 'hidden' }}>
-          <div className="bg-[#0d0d0d] border border-white/10 rounded-2xl w-full max-w-lg flex flex-col" style={{ maxHeight: 'calc(100vh - 2rem)' }}>
-            <div className="flex items-center justify-between p-6 border-b border-white/5">
+        <div className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-[#0d0d0d] border border-white/10 rounded-2xl w-full max-w-lg flex flex-col my-auto" style={{ maxHeight: 'calc(100vh - 2rem)' }}>
+            <div className="flex items-center justify-between p-6 border-b border-white/5 flex-shrink-0">
               <h2 className="font-oswald text-lg font-bold uppercase tracking-wider text-white">{editingId ? "Edit Project" : "Add Project"}</h2>
               <button onClick={() => setShowModal(false)} className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><X className="w-4 h-4" /></button>
             </div>
