@@ -112,18 +112,7 @@ export default function AboutMaster() {
         delay: 0.2
       });
 
-      // Stats Bar reveal
-      gsap.from(".hero-stat-card", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".hero-stats-bar",
-          start: "top 90%"
-        }
-      });
+
     }, containerRef);
 
     return () => ctx.revert();
@@ -187,7 +176,7 @@ export default function AboutMaster() {
           {/* Right Column: High-Res Founder Portrait Card */}
           <div className="lg:col-span-5 hero-portrait-wrap">
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-white/10 p-2 shadow-2xl group">
-              <div className="relative aspect-[3/2] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden bg-black">
+              <div className="relative aspect-[4/3] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden bg-black">
                 <Image
                   src="/images/founder_portrait_vinay.png"
                   alt="Vinay Kanth - Founder"
