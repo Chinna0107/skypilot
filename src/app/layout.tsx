@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     creator: "@skypilotdrones",
   },
   verification: {
-    google: "google-site-verification-placeholder",
+    google: "LatzE7wioq9Yh-2NsM5JSBpLKqG3nIhK13OZ4YoYP74",
   },
   alternates: {
     canonical: BASE_URL,
