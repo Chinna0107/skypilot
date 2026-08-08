@@ -88,7 +88,7 @@ export default function FounderStory() {
             {/* Signature Placeholder */}
             <div className="story-anim">
               <p className="font-serif italic text-4xl text-gray-400">
-                Vinay Kanth
+                Emidi Vinay Kanth
               </p>
             </div>
           </div>

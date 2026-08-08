@@ -78,7 +78,7 @@ export default function FounderAndClients() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-6 left-6">
                 <p className="font-oswald text-white text-lg font-bold tracking-wider uppercase mb-1">
-                  VINAY KANTH
+                  EMIDI VINAY KANTH
                 </p>
                 <p className="font-inter text-[var(--color-brand-orange)] text-xs font-semibold tracking-wider">
                   FOUNDER & PILOT
@@ -97,11 +97,16 @@ export default function FounderAndClients() {
                 ELEVATING VISIONS, DELIVERING IMPACT.
               </h2>
               <p className="font-inter text-gray-300 text-sm leading-relaxed mb-5">
-                Hi, I'm Vinay Kanth, Founder & DGCA Certified Drone Pilot. With over 8 years of experience, I help industries, businesses, and governments capture, inspect, and analyze the world from above — safely, precisely, and efficiently.
+                Hi, I'm Emidi Vinay Kanth, Founder & DGCA Certified Drone Pilot. With over 8 years of experience, I help industries, businesses, and governments capture, inspect, and analyze the world from above — safely, precisely, and efficiently.
               </p>
               <p className="font-inter text-gray-400 text-sm leading-relaxed mb-5">
                 SkyPilot was founded to show stories from a new perspective — capturing moments, places, and ideas from the sky with creativity and purpose.
               </p>
+              <p className="font-inter text-gray-400 text-sm leading-relaxed mb-5">
+               With deep technical expertise and a passion for visual storytelling, Vinay leads SkyPilot with a focus on safety, creativity, and precision. His experience enables the team to plan and execute cinematic aerial shots that meet both creative expectations and operational standards.
+
+              </p>
+
               <p className="italic border-l-2 border-[var(--color-brand-orange)] pl-3 font-inter text-gray-400 text-sm leading-relaxed">
                 "Every flight is carefully planned to balance creative ambition with professional drone operations."
               </p>

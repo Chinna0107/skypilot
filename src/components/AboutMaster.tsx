@@ -89,11 +89,21 @@ function useFadeIn() {
   return ref;
 }
 
+const FOUNDER_SERVICES = [
+  { icon: Camera, label: "Aerial cinematography for films, commercials & music videos" },
+  { icon: Star, label: "Drone coverage for weddings, events & live experiences" },
+  { icon: Landmark, label: "Real-estate and architectural aerial videos" },
+  { icon: MapPin, label: "Tourism, hospitality & destination visuals" },
+  { icon: Cpu, label: "Brand films and social-media content" },
+  { icon: Compass, label: "Drone operation support for creative productions" },
+];
+
 export default function AboutMaster() {
   const [activeTab, setActiveTab] = useState<"story" | "fleet" | "safety" | "milestones">("story");
   const heroRef = useFadeIn();
   const portraitRef = useFadeIn();
   const statsRef = useFadeIn();
+  const founderRef = useFadeIn();
   const tabsRef = useFadeIn();
   const ctaRef = useFadeIn();
 
@@ -145,11 +155,11 @@ export default function AboutMaster() {
             </h1>
 
             <p className="font-inter text-gray-300 text-sm leading-relaxed">
-              Founded by DGCA-certified pilot <strong className="text-white">Vinay Kanth</strong>, SkyPilot combines high-resolution optics, photogrammetry LiDAR, and cinematic drone technology to help industries, civil engineers, and media creators see the bigger picture.
+              Founded by DGCA-certified pilot <strong className="text-white">Emidi Vinay Kanth</strong>, SkyPilot combines high-resolution optics, photogrammetry LiDAR, and cinematic drone technology to help industries, civil engineers, and media creators see the bigger picture.
             </p>
 
             <div className="pt-3 border-t border-white/10 space-y-2">
-              <p className="font-serif italic text-2xl sm:text-3xl text-[var(--color-brand-orange)]">Vinay Kanth</p>
+              <p className="font-serif italic text-2xl sm:text-3xl text-[var(--color-brand-orange)]">Emidi Vinay Kanth</p>
               <p className="font-oswald text-xs uppercase font-bold text-white tracking-widest">FOUNDER & CHIEF DRONE PILOT</p>
               <p className="font-inter text-[10px] text-gray-400 uppercase tracking-widest">DGCA CERTIFIED • LICENSED OPERATOR</p>
               <div className="pt-1 space-y-1.5">
@@ -182,6 +192,130 @@ export default function AboutMaster() {
               </div>
             );
           })}
+        </div>
+
+        {/* ── MEET THE FOUNDER ── */}
+        <div ref={founderRef} className="mb-8 sm:mb-14 fade-up">
+
+          {/* Section label */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="font-inter text-[var(--color-brand-orange)] text-[10px] font-black uppercase tracking-widest">MEET THE FOUNDER</span>
+            <div className="flex-1 h-px bg-white/10" />
+          </div>
+
+          {/* Founder card */}
+          <div className="bg-[#0e0e0e] border border-white/5 rounded-2xl overflow-hidden mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+
+              {/* Left accent bar + name card */}
+              <div className="lg:col-span-2 bg-gradient-to-br from-[#181818] to-[#0a0a0a] p-6 sm:p-8 flex flex-col justify-between gap-6 border-b lg:border-b-0 lg:border-r border-white/5">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[var(--color-brand-orange)]/10 border border-[var(--color-brand-orange)]/20 text-[var(--color-brand-orange)] text-[9px] font-bold tracking-widest uppercase mb-4">
+                    <Award className="w-3 h-3" /> FOUNDER & CHIEF DRONE PILOT
+                  </div>
+                  <h3 className="font-oswald text-2xl sm:text-3xl font-extrabold uppercase text-white leading-tight tracking-tight">
+                    EMIDI VINAY<br />
+                    <span className="text-[var(--color-brand-orange)]">KANTH</span>
+                  </h3>
+                  <p className="font-inter text-gray-400 text-xs mt-2 leading-relaxed">
+                    A drone operations professional with <strong className="text-white">8 years of experience</strong> in aerial filming and drone operations.
+                  </p>
+                </div>
+
+                {/* Credential chips */}
+                <div className="space-y-2">
+                  {[
+                    { icon: ShieldCheck, text: "Deep Technical Expertise" },
+                    { icon: Star, text: "8 Years Aerial Experience" },
+                    { icon: HardHat, text: "Safety-First Operations" },
+                  ].map((c, i) => {
+                    const CIcon = c.icon;
+                    return (
+                      <div key={i} className="flex items-center gap-2.5 bg-[#141414] border border-white/5 rounded-lg px-3 py-2">
+                        <CIcon className="w-3.5 h-3.5 text-[var(--color-brand-orange)] shrink-0" />
+                        <span className="font-inter text-[11px] text-gray-300">{c.text}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Right: bio + quote */}
+              <div className="lg:col-span-3 p-6 sm:p-8 flex flex-col justify-center gap-5">
+                <p className="font-inter text-gray-300 text-sm leading-relaxed">
+                  With deep technical expertise and a passion for visual storytelling, Vinay leads SkyPilot with a focus on{" "}
+                  <strong className="text-white">safety, creativity, and precision</strong>. His experience enables the team to plan and execute cinematic aerial shots that meet both creative expectations and operational standards.
+                </p>
+
+                {/* Pull quote */}
+                <div className="relative border-l-2 border-[var(--color-brand-orange)] pl-5 py-1">
+                  <span className="absolute -top-2 -left-1 text-5xl text-[var(--color-brand-orange)] opacity-30 font-serif leading-none select-none">&ldquo;</span>
+                  <blockquote className="font-serif italic text-white text-base sm:text-lg leading-snug">
+                    SkyPilot was created to show stories from a new perspective—capturing moments, places, and ideas from the sky with creativity and purpose.
+                  </blockquote>
+                  <p className="font-inter text-[10px] text-[var(--color-brand-orange)] font-bold uppercase tracking-widest mt-3">— Emidi Vinay Kanth, Founder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Vision + Why grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+
+            {/* Our Vision */}
+            <div className="bg-[#0e0e0e] border border-white/5 rounded-2xl p-5 sm:p-6 flex flex-col gap-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 bg-[var(--color-brand-orange)]/10 border border-[var(--color-brand-orange)]/20 rounded-xl text-[var(--color-brand-orange)]">
+                  <Compass className="w-4 h-4" />
+                </div>
+                <span className="font-inter text-[var(--color-brand-orange)] text-[9px] font-black uppercase tracking-widest">OUR VISION</span>
+              </div>
+              <h4 className="font-oswald text-white text-lg sm:text-xl font-bold uppercase leading-tight">TRUSTED CINEMATOGRAPHY. MEMORABLE STORIES.</h4>
+              <p className="font-inter text-gray-400 text-xs sm:text-sm leading-relaxed">
+                To be a trusted name in drone cinematography, known for cinematic quality, safe operations, and memorable visual storytelling.
+              </p>
+            </div>
+
+            {/* Why SkyPilot */}
+            <div className="bg-gradient-to-br from-[#0e0e0e] to-[#161616] border border-[var(--color-brand-orange)]/15 rounded-2xl p-5 sm:p-6 flex flex-col gap-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 bg-[var(--color-brand-orange)]/10 border border-[var(--color-brand-orange)]/20 rounded-xl text-[var(--color-brand-orange)]">
+                  <Star className="w-4 h-4" />
+                </div>
+                <span className="font-inter text-[var(--color-brand-orange)] text-[9px] font-black uppercase tracking-widest">WHY SKYPILOT</span>
+              </div>
+              <h4 className="font-oswald text-white text-lg sm:text-xl font-bold uppercase leading-tight">EXPERIENCE MEETS FILMMAKING PERSPECTIVE.</h4>
+              <p className="font-inter text-gray-400 text-xs sm:text-sm leading-relaxed">
+                Every flight is carefully planned to balance creative ambition with professional drone operations. We bring experience, technical skill, and a filmmaker&apos;s perspective to every project—helping clients capture visuals that stand out.
+              </p>
+            </div>
+          </div>
+
+          {/* Our Services */}
+          <div className="bg-[#0e0e0e] border border-white/5 rounded-2xl p-5 sm:p-7">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="p-2 bg-[var(--color-brand-orange)]/10 border border-[var(--color-brand-orange)]/20 rounded-xl text-[var(--color-brand-orange)]">
+                <Camera className="w-4 h-4" />
+              </div>
+              <div>
+                <span className="font-inter text-[var(--color-brand-orange)] text-[9px] font-black uppercase tracking-widest block">OUR SERVICES</span>
+                <h4 className="font-oswald text-white text-lg font-bold uppercase leading-tight">WHAT WE DELIVER</h4>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {FOUNDER_SERVICES.map((svc, i) => {
+                const SIcon = svc.icon;
+                return (
+                  <div key={i} className="flex items-start gap-3 bg-[#141414] border border-white/5 rounded-xl p-3.5 hover:border-[var(--color-brand-orange)]/30 transition-all duration-200 group">
+                    <div className="p-2 bg-[#1e1e1e] border border-white/5 rounded-lg text-[var(--color-brand-orange)] shrink-0 group-hover:bg-[var(--color-brand-orange)]/10 transition-colors duration-200">
+                      <SIcon className="w-3.5 h-3.5" />
+                    </div>
+                    <p className="font-inter text-gray-300 text-[11px] sm:text-xs leading-relaxed">{svc.label}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* ── TABS ── */}

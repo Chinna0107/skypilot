@@ -91,7 +91,7 @@ export default function ContactMaster() {
           </h1>
 
           <p className="cnt-anim font-inter text-gray-300 text-sm sm:text-base leading-relaxed">
-            Ready to deploy high-resolution drone mapping, thermal inspection, or aerial cinematography? Fill out the quote terminal below or chat with pilot Vinay Kanth directly.
+            Ready to deploy high-resolution drone mapping, thermal inspection, or aerial cinematography? Fill out the quote terminal below or chat with pilot Emidi Vinay Kanth directly.
           </p>
         </div>
 

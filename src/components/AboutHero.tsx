@@ -93,7 +93,7 @@ export default function AboutHero() {
 
             <div className="hero-anim-item">
               <p className="font-serif italic text-4xl text-[var(--color-brand-orange)] mb-2">
-                Vinay Kanth
+                Emidi Vinay Kanth
               </p>
               <p className="font-oswald uppercase tracking-widest font-bold text-white text-sm mb-1">
                 FOUNDER & DRONE PILOT
